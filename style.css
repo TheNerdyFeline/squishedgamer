@@ -1,0 +1,25 @@
+body {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 18px;
+    max-width: 65ch;
+}
+
+
+@media print {
+    .header {
+	position: static;
+    }
+    
+    nav {
+	display: none;
+    }
+    
+    a[href^="http"]:not([href*="mywebsite.com"])::after {
+	content: " (" attr(href) ")";
+    }
+}
+
+i {
+	padding: 5px;
+}
